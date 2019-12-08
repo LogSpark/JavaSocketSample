@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="uml">
+  <packagedElement xmi:type="uml:Package" xmi:id="_kXcLIAbGEemvrfjp6OBXfw" name="server">
+    <packagedElement xmi:type="uml:Class" xmi:id="_kXcyMAbGEemvrfjp6OBXfw" name="ServerThread">
+      <ownedComment xmi:id="_kXfOcAbGEemvrfjp6OBXfw">
+        <body>/** 
+ * Server线程
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_kYzdEAbGEemvrfjp6OBXfw" general="_kYy2AAbGEemvrfjp6OBXfw"/>
+      <ownedAttribute xmi:id="_kY0EIAbGEemvrfjp6OBXfw" name="s" visibility="private" type="_kYi-ZwbGEemvrfjp6OBXfw">
+        <ownedComment xmi:id="_kY0rMAbGEemvrfjp6OBXfw">
+          <body>/** 
+ * 连接的客户端socket
+ */
+</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_kY1SQAbGEemvrfjp6OBXfw" name="br" visibility="private" type="_kYi-YgbGEemvrfjp6OBXfw">
+        <ownedComment xmi:id="_kY15UAbGEemvrfjp6OBXfw">
+          <body>/** 
+ * 数据读入
+ */
+</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_kY2gYAbGEemvrfjp6OBXfw" name="run" visibility="public"/>
+      <ownedOperation xmi:id="_kY3HcQbGEemvrfjp6OBXfw" name="readFromLine" visibility="private">
+        <ownedComment xmi:id="_kY3HcwbGEemvrfjp6OBXfw">
+          <body>/** 
+ * 读入字符串处理如果连接异常,移除该socket
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_kY3HcgbGEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_kY5jsAbGEemvrfjp6OBXfw" name="getContent" visibility="public">
+        <ownedComment xmi:id="_kY6KwAbGEemvrfjp6OBXfw">
+          <body>/** 
+ * 将客户端发来的xml字符串转化为消息处理对象
+ * @param line
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_kY5jsQbGEemvrfjp6OBXfw" name="line">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_kY5jsgbGEemvrfjp6OBXfw" name="return" type="_kYjleQbGEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_kY6x0AbGEemvrfjp6OBXfw" name="sendMessage" visibility="public">
+        <ownedComment xmi:id="_kY7Y4AbGEemvrfjp6OBXfw">
+          <body>/** 
+ * 将消息发送给客户端
+ * @param hrc Server消息处理对象
+ * @param line xml字符串
+ * @throws IOException
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_kY6x0QbGEemvrfjp6OBXfw" name="hrc" type="_kYjleQbGEemvrfjp6OBXfw"/>
+        <ownedParameter xmi:id="_kY6x0gbGEemvrfjp6OBXfw" name="line">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_kXf1gAbGEemvrfjp6OBXfw" name="Server">
+      <ownedComment xmi:id="_kXf1gQbGEemvrfjp6OBXfw">
+        <body>/** 
+ * Server主进程
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_kY7Y4QbGEemvrfjp6OBXfw" name="serverSocket" visibility="package" type="_kYjlewbGEemvrfjp6OBXfw">
+        <ownedComment xmi:id="_kY7_8AbGEemvrfjp6OBXfw">
+          <body>/** 
+ * 服务器端等待socket连接
+ */
+</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_kY8nAQbGEemvrfjp6OBXfw" name="socketList" visibility="public" isStatic="true" type="_kY8nAAbGEemvrfjp6OBXfw">
+        <ownedComment xmi:id="_kY9OEAbGEemvrfjp6OBXfw">
+          <body>/** 
+ * 所有连接的socket
+ */
+</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_kY91IAbGEemvrfjp6OBXfw" name="idSocket" visibility="public" isStatic="true" type="_kY9OEQbGEemvrfjp6OBXfw">
+        <ownedComment xmi:id="_kY-cMAbGEemvrfjp6OBXfw">
+          <body>/** 
+ * 客户端保存的用户ID和socket关联对象列表
+ */
+</body>
+        </ownedComment>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_kXf1ggbGEemvrfjp6OBXfw" name="Main">
+      <ownedOperation xmi:id="_kY-cMQbGEemvrfjp6OBXfw" name="main" visibility="public" isStatic="true">
+        <ownedComment xmi:id="_kY-cNQbGEemvrfjp6OBXfw">
+          <body>/** 
+ * 服务器启动入口
+ * @param args
+ * @throws IOException 
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_kY-cMgbGEemvrfjp6OBXfw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kY-cMwbGEemvrfjp6OBXfw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kY-cNAbGEemvrfjp6OBXfw"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_kYy2AAbGEemvrfjp6OBXfw" name="Thread"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_s4zIMAbGEemvrfjp6OBXfw" name="ServerThread" classifierBehavior="_09n6QAbGEemvrfjp6OBXfw">
+      <ownedAttribute xmi:id="_2FN0cAbGEemvrfjp6OBXfw" name="s：Socket">
+        <qualifier xmi:id="_3LjKYAbGEemvrfjp6OBXfw" name="s" visibility="private">
+          <ownedComment xmi:id="_3LjKYQbGEemvrfjp6OBXfw">
+            <body>/** 
+ * 连接的客户端socket
+ */
+</body>
+          </ownedComment>
+        </qualifier>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_6XwnsAbGEemvrfjp6OBXfw" name="Property2"/>
+      <ownedAttribute xmi:id="_8k_UQAbGEemvrfjp6OBXfw" name="Property1"/>
+      <ownedAttribute xmi:id="_8qQOwAbGEemvrfjp6OBXfw" name="Property3"/>
+      <ownedAttribute xmi:id="_DhyHQAbHEemvrfjp6OBXfw" name="Property4"/>
+      <ownedAttribute xmi:id="_D7XE4AbHEemvrfjp6OBXfw" name="Property5"/>
+      <ownedAttribute xmi:id="_ECV2oAbHEemvrfjp6OBXfw" name="Property6"/>
+      <ownedAttribute xmi:id="_GUopYAbHEemvrfjp6OBXfw" name="Property7"/>
+      <ownedAttribute xmi:id="_Gn9OAAbHEemvrfjp6OBXfw" name="br：BufferReader"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_09n6QAbGEemvrfjp6OBXfw">
+        <region xmi:id="_09ohUAbGEemvrfjp6OBXfw"/>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_wOWuwAbGEemvrfjp6OBXfw" name="run"/>
+      <ownedOperation xmi:id="_yxVo4AbGEemvrfjp6OBXfw" name="readFromLine"/>
+      <ownedOperation xmi:id="_MnHUEAbHEemvrfjp6OBXfw" name="getContent"/>
+      <ownedOperation xmi:id="_M08UsAbHEemvrfjp6OBXfw" name="sendMessage"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_T3BQUAbHEemvrfjp6OBXfw" name="ServerThread" classifierBehavior="_T3BQXAbHEemvrfjp6OBXfw">
+      <ownedAttribute xmi:id="_T3BQUQbHEemvrfjp6OBXfw" name="s：Socket">
+        <qualifier xmi:id="_T3BQUgbHEemvrfjp6OBXfw" name="s" visibility="private">
+          <ownedComment xmi:id="_T3BQUwbHEemvrfjp6OBXfw">
+            <body>/** 
+ * 连接的客户端socket
+ */
+</body>
+          </ownedComment>
+        </qualifier>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_T3BQVAbHEemvrfjp6OBXfw" name="Property2"/>
+      <ownedAttribute xmi:id="_T3BQVQbHEemvrfjp6OBXfw" name="Property1"/>
+      <ownedAttribute xmi:id="_T3BQVgbHEemvrfjp6OBXfw" name="Property3"/>
+      <ownedAttribute xmi:id="_T3BQVwbHEemvrfjp6OBXfw" name="Property4"/>
+      <ownedAttribute xmi:id="_T3BQWAbHEemvrfjp6OBXfw" name="Property5"/>
+      <ownedAttribute xmi:id="_T3BQWQbHEemvrfjp6OBXfw" name="Property6"/>
+      <ownedAttribute xmi:id="_T3BQWgbHEemvrfjp6OBXfw" name="Property7"/>
+      <ownedAttribute xmi:id="_T3BQWwbHEemvrfjp6OBXfw" name="br：BufferReader"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_T3BQXAbHEemvrfjp6OBXfw">
+        <region xmi:id="_T3BQXQbHEemvrfjp6OBXfw"/>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_T3BQXgbHEemvrfjp6OBXfw" name="run"/>
+      <ownedOperation xmi:id="_T3BQXwbHEemvrfjp6OBXfw" name="readFromLine"/>
+      <ownedOperation xmi:id="_T3BQYAbHEemvrfjp6OBXfw" name="getContent"/>
+      <ownedOperation xmi:id="_T3BQYQbHEemvrfjp6OBXfw" name="sendMessage"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_dng6AAbHEemvrfjp6OBXfw" name="A_&lt;main>_&lt;server>" memberEnd="_dng6AQbHEemvrfjp6OBXfw _dng6BAbHEemvrfjp6OBXfw">
+      <ownedEnd xmi:id="_dng6AQbHEemvrfjp6OBXfw" name="main" type="_kXf1ggbGEemvrfjp6OBXfw" association="_dng6AAbHEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dng6AgbHEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dng6AwbHEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_dng6BAbHEemvrfjp6OBXfw" name="server" type="_kXf1gAbGEemvrfjp6OBXfw" association="_dng6AAbHEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dng6BQbHEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dng6BgbHEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_eFYhwAbHEemvrfjp6OBXfw" name="A_&lt;server>_&lt;serverThread>" memberEnd="_eFYhwQbHEemvrfjp6OBXfw _eFYhxAbHEemvrfjp6OBXfw">
+      <ownedEnd xmi:id="_eFYhwQbHEemvrfjp6OBXfw" name="server" type="_kXf1gAbGEemvrfjp6OBXfw" association="_eFYhwAbHEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eFYhwgbHEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eFYhwwbHEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_eFYhxAbHEemvrfjp6OBXfw" name="serverThread" type="_s4zIMAbGEemvrfjp6OBXfw" association="_eFYhwAbHEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eFYhxQbHEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eFYhxgbHEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ekVuoAbHEemvrfjp6OBXfw" name="A_&lt;server>_&lt;serverThread>" memberEnd="_ekVuoQbHEemvrfjp6OBXfw _ekVupAbHEemvrfjp6OBXfw">
+      <ownedEnd xmi:id="_ekVuoQbHEemvrfjp6OBXfw" name="server" type="_kXf1gAbGEemvrfjp6OBXfw" association="_ekVuoAbHEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ekVuogbHEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ekVuowbHEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_ekVupAbHEemvrfjp6OBXfw" name="serverThread" type="_T3BQUAbHEemvrfjp6OBXfw" association="_ekVuoAbHEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ekVupQbHEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ekVupgbHEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_fMR4YAbHEemvrfjp6OBXfw" name="A_&lt;server>_&lt;serverThread>" memberEnd="_fMR4YQbHEemvrfjp6OBXfw _fMR4ZAbHEemvrfjp6OBXfw">
+      <ownedEnd xmi:id="_fMR4YQbHEemvrfjp6OBXfw" name="server" type="_kXf1gAbGEemvrfjp6OBXfw" association="_fMR4YAbHEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fMR4YgbHEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fMR4YwbHEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_fMR4ZAbHEemvrfjp6OBXfw" name="serverThread" type="_kXcyMAbGEemvrfjp6OBXfw" association="_fMR4YAbHEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fMR4ZQbHEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fMR4ZgbHEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_kYi-YAbGEemvrfjp6OBXfw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_kYi-YQbGEemvrfjp6OBXfw" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_kYi-YgbGEemvrfjp6OBXfw" name="BufferedReader"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_kYi-YwbGEemvrfjp6OBXfw" name="IOException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_kYi-ZAbGEemvrfjp6OBXfw" name="InputStreamReader"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_kYi-ZQbGEemvrfjp6OBXfw" name="PrintStream"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_kYi-ZgbGEemvrfjp6OBXfw" name="net">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_kYi-ZwbGEemvrfjp6OBXfw" name="Socket"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_kYjlewbGEemvrfjp6OBXfw" name="ServerSocket"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_kYjlfAbGEemvrfjp6OBXfw" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_kYjlfQbGEemvrfjp6OBXfw" name="ArrayList"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_kYjlfgbGEemvrfjp6OBXfw" name="Collections"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_kYjlfwbGEemvrfjp6OBXfw" name="List"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_kYjlcAbGEemvrfjp6OBXfw" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_kYjlcQbGEemvrfjp6OBXfw" name="thoughtworks">
+      <packagedElement xmi:type="uml:Package" xmi:id="_kYjlcgbGEemvrfjp6OBXfw" name="xstream">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_kYjlcwbGEemvrfjp6OBXfw" name="XStream"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_kYjldAbGEemvrfjp6OBXfw" name="io">
+          <packagedElement xmi:type="uml:Package" xmi:id="_kYjldQbGEemvrfjp6OBXfw" name="xml">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_kYjldgbGEemvrfjp6OBXfw" name="DomDriver"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_kYjldwbGEemvrfjp6OBXfw" name="commons">
+    <packagedElement xmi:type="uml:DataType" xmi:id="_kYjleAbGEemvrfjp6OBXfw" name="ClientRequestHandle"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_kYjleQbGEemvrfjp6OBXfw" name="ServerHandle"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_kYjlegbGEemvrfjp6OBXfw" name="ServerIdUser"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_kY8nAAbGEemvrfjp6OBXfw" name="List&lt;Socket>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_kY9OEQbGEemvrfjp6OBXfw" name="List&lt;ServerIdUser>"/>
+</uml:Model>

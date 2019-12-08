@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="uml">
+  <packagedElement xmi:type="uml:Package" xmi:id="_eMVJMQbFEemvrfjp6OBXfw" name="commons">
+    <packagedElement xmi:type="uml:Class" xmi:id="_eMVJMgbFEemvrfjp6OBXfw" name="ClientRequestHandle">
+      <ownedComment xmi:id="_eMVwQAbFEemvrfjp6OBXfw">
+        <body>/** 
+ * 客户端发送消息处理
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_eNauUAbFEemvrfjp6OBXfw" general="_eMWXUgbFEemvrfjp6OBXfw"/>
+      <ownedOperation xmi:id="_eNnioQbFEemvrfjp6OBXfw" name="toXML" visibility="public">
+        <ownedComment xmi:id="_eNoJsAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 转化成XML
+ * @return XML字符串
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eNniogbFEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eMWXUAbFEemvrfjp6OBXfw" name="ClientReceiveHandle">
+      <ownedComment xmi:id="_eMWXUQbFEemvrfjp6OBXfw">
+        <body>/** 
+ * 客户端接收消息的信息处理
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_eNoJsQbFEemvrfjp6OBXfw" general="_eMWXUgbFEemvrfjp6OBXfw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eMWXUgbFEemvrfjp6OBXfw" name="MessageHandle">
+      <ownedComment xmi:id="_eMW-YAbFEemvrfjp6OBXfw">
+        <body>/** 
+ * 消息处理父类
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_eNowwAbFEemvrfjp6OBXfw" name="sender" visibility="public" type="_eMYzkQbFEemvrfjp6OBXfw" association="_ePEUIAbFEemvrfjp6OBXfw">
+        <ownedComment xmi:id="_eNowwQbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 发送者
+ */
+</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_eNpX0AbFEemvrfjp6OBXfw" name="message" visibility="public">
+        <ownedComment xmi:id="_eNpX0QbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 消息
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_eNp-4AbFEemvrfjp6OBXfw" name="receiver" visibility="public" type="_eMYzkQbFEemvrfjp6OBXfw" association="_ePEUIgbFEemvrfjp6OBXfw">
+        <ownedComment xmi:id="_eNql8AbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 接收者
+ */
+</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_eNrNAAbFEemvrfjp6OBXfw" name="actionHandleClass" visibility="public">
+        <ownedComment xmi:id="_eNrNAQbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 接收到后消息处理类
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_eNrNAgbFEemvrfjp6OBXfw" name="getSender" visibility="public">
+        <ownedComment xmi:id="_eNr0EAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eNrNAwbFEemvrfjp6OBXfw" name="return" type="_eMYzkQbFEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eNr0EQbFEemvrfjp6OBXfw" name="setSender" visibility="public">
+        <ownedComment xmi:id="_eNtpQAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param sender
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eNr0EgbFEemvrfjp6OBXfw" name="sender" type="_eMYzkQbFEemvrfjp6OBXfw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eNtpQQbFEemvrfjp6OBXfw" name="getMessage" visibility="public">
+        <ownedComment xmi:id="_eNuQUAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eNtpQgbFEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eNuQUQbFEemvrfjp6OBXfw" name="setMessage" visibility="public">
+        <ownedComment xmi:id="_eNu3YAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param message
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eNuQUgbFEemvrfjp6OBXfw" name="message">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eNu3YQbFEemvrfjp6OBXfw" name="getReceiver" visibility="public">
+        <ownedComment xmi:id="_eNvecAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eNu3YgbFEemvrfjp6OBXfw" name="return" type="_eMYzkQbFEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eNvecQbFEemvrfjp6OBXfw" name="setReceiver" visibility="public">
+        <ownedComment xmi:id="_eNwFgAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param receiver
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eNvecgbFEemvrfjp6OBXfw" name="receiver" type="_eMYzkQbFEemvrfjp6OBXfw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eNwFgQbFEemvrfjp6OBXfw" name="getActionHandleClass" visibility="public">
+        <ownedComment xmi:id="_eNwskAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eNwFggbFEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eNwskQbFEemvrfjp6OBXfw" name="setActionHandleClass" visibility="public">
+        <ownedComment xmi:id="_eNxToAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param actionHandleClass
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eNwskgbFEemvrfjp6OBXfw" name="actionHandleClass">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_eMW-YQbFEemvrfjp6OBXfw" name="Game">
+      <ownedComment xmi:id="_eMW-YgbFEemvrfjp6OBXfw">
+        <body>/** 
+ * 开始接口
+ * @author lndx
+ */
+</body>
+      </ownedComment>
+      <ownedOperation xmi:id="_eNxToQbFEemvrfjp6OBXfw" name="start" visibility="public">
+        <ownedParameter xmi:id="_eNxTogbFEemvrfjp6OBXfw" name="user" type="_eMYzkQbFEemvrfjp6OBXfw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eMXlcAbFEemvrfjp6OBXfw" name="MapUserID">
+      <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_eMXlcQbFEemvrfjp6OBXfw" parameter="_eMXlcgbFEemvrfjp6OBXfw _eMXldAbFEemvrfjp6OBXfw">
+        <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_eMXlcgbFEemvrfjp6OBXfw" parameteredElement="_eMXlcwbFEemvrfjp6OBXfw">
+          <ownedParameteredElement xmi:type="uml:Class" xmi:id="_eMXlcwbFEemvrfjp6OBXfw" name="K" templateParameter="_eMXlcgbFEemvrfjp6OBXfw"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_eMXldAbFEemvrfjp6OBXfw" parameteredElement="_eMXldQbFEemvrfjp6OBXfw">
+          <ownedParameteredElement xmi:type="uml:Class" xmi:id="_eMXldQbFEemvrfjp6OBXfw" name="V" templateParameter="_eMXldAbFEemvrfjp6OBXfw"/>
+        </ownedParameter>
+      </ownedTemplateSignature>
+      <ownedAttribute xmi:id="_eNx6sQbFEemvrfjp6OBXfw" name="map" visibility="public" type="_eNx6sAbFEemvrfjp6OBXfw"/>
+      <ownedOperation xmi:id="_eNyhwAbFEemvrfjp6OBXfw" name="getKeyByValue" visibility="public">
+        <ownedParameter xmi:id="_eNyhwQbFEemvrfjp6OBXfw" name="val" type="_eMXldQbFEemvrfjp6OBXfw"/>
+        <ownedParameter xmi:id="_eNyhwgbFEemvrfjp6OBXfw" name="return" type="_eMXlcwbFEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eNzv4AbFEemvrfjp6OBXfw" name="put" visibility="public">
+        <ownedParameter xmi:id="_eNzv4QbFEemvrfjp6OBXfw" name="key" type="_eMXlcwbFEemvrfjp6OBXfw"/>
+        <ownedParameter xmi:id="_eNzv4gbFEemvrfjp6OBXfw" name="value" type="_eMXldQbFEemvrfjp6OBXfw"/>
+        <ownedParameter xmi:id="_eNzv4wbFEemvrfjp6OBXfw" name="return" type="_eMXldQbFEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eN0W8AbFEemvrfjp6OBXfw" name="valueSet" visibility="public">
+        <ownedParameter xmi:id="_eN0W8QbFEemvrfjp6OBXfw" name="return" type="_eNaHRAbFEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eMYMgAbFEemvrfjp6OBXfw" name="ServerIdUser">
+      <ownedComment xmi:id="_eMYzkAbFEemvrfjp6OBXfw">
+        <body>/** 
+ * 服务器端关联用户ID及其socket
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_eN1lEAbFEemvrfjp6OBXfw" name="Id" visibility="public">
+        <ownedComment xmi:id="_eN2MIAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 用户ID
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_eN2MIQbFEemvrfjp6OBXfw" name="socket" visibility="public" type="_eNaHRgbFEemvrfjp6OBXfw">
+        <ownedComment xmi:id="_eN2zMAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 用户socket
+ */
+</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_eN2zMQbFEemvrfjp6OBXfw" name="getId" visibility="public">
+        <ownedComment xmi:id="_eN3aQAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN2zMgbFEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eN3aQQbFEemvrfjp6OBXfw" name="setId" visibility="public">
+        <ownedComment xmi:id="_eN4BUAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param id
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN3aQgbFEemvrfjp6OBXfw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eN4BUQbFEemvrfjp6OBXfw" name="getSocket" visibility="public">
+        <ownedComment xmi:id="_eN4BUwbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN4BUgbFEemvrfjp6OBXfw" name="return" type="_eNaHRgbFEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eN4oYAbFEemvrfjp6OBXfw" name="setSocket" visibility="public">
+        <ownedComment xmi:id="_eN5PcAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param socket
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN4oYQbFEemvrfjp6OBXfw" name="socket" type="_eNaHRgbFEemvrfjp6OBXfw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eMYzkQbFEemvrfjp6OBXfw" name="User">
+      <ownedComment xmi:id="_eMYzkgbFEemvrfjp6OBXfw">
+        <body>/** 
+ * 用户对象
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_eN5PcQbFEemvrfjp6OBXfw" name="id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_eN6dkAbFEemvrfjp6OBXfw" name="name" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_eN7EoAbFEemvrfjp6OBXfw" name="socket" visibility="private" type="_eNaHRgbFEemvrfjp6OBXfw"/>
+      <ownedOperation xmi:id="_eN7rsAbFEemvrfjp6OBXfw" name="setId" visibility="public">
+        <ownedComment xmi:id="_eN7rsgbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param id
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN7rsQbFEemvrfjp6OBXfw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eN8SwAbFEemvrfjp6OBXfw" name="getId" visibility="public">
+        <ownedComment xmi:id="_eN8SwgbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN8SwQbFEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eN850AbFEemvrfjp6OBXfw" name="setName" visibility="public">
+        <ownedComment xmi:id="_eN9g4AbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param name
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN850QbFEemvrfjp6OBXfw" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eN9g4QbFEemvrfjp6OBXfw" name="getName" visibility="public">
+        <ownedComment xmi:id="_eN-H8AbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN9g4gbFEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eN-H8QbFEemvrfjp6OBXfw" name="setSocket" visibility="public">
+        <ownedComment xmi:id="_eN-vAAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param socket
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN-H8gbFEemvrfjp6OBXfw" name="socket" type="_eNaHRgbFEemvrfjp6OBXfw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eN-vAQbFEemvrfjp6OBXfw" name="getSocket" visibility="public">
+        <ownedComment xmi:id="_eN_WEAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN-vAgbFEemvrfjp6OBXfw" name="return" type="_eNaHRgbFEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_eN_WEQbFEemvrfjp6OBXfw" name="getPrintStream" visibility="public">
+        <ownedComment xmi:id="_eN_9IAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 向客户端输出信息，便于管理
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_eN_WEgbFEemvrfjp6OBXfw" name="return" type="_eNaHSAbFEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_eMZaoAbFEemvrfjp6OBXfw" name="ClientAction">
+      <ownedComment xmi:id="_eMZaoQbFEemvrfjp6OBXfw">
+        <body>/** 
+ * 客户端动作接口
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <ownedOperation xmi:id="_eOAkMAbFEemvrfjp6OBXfw" name="execute" visibility="public">
+        <ownedParameter xmi:id="_eOAkMQbFEemvrfjp6OBXfw" name="crh" type="_eMWXUAbFEemvrfjp6OBXfw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eMZaogbFEemvrfjp6OBXfw" name="ServerHandle">
+      <ownedComment xmi:id="_eMZaowbFEemvrfjp6OBXfw">
+        <body>/** 
+ * 服务器端消息处理
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_eOAkMgbFEemvrfjp6OBXfw" general="_eMWXUgbFEemvrfjp6OBXfw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ePEUIAbFEemvrfjp6OBXfw" memberEnd="_eNowwAbFEemvrfjp6OBXfw _ePEUIQbFEemvrfjp6OBXfw">
+      <ownedEnd xmi:id="_ePEUIQbFEemvrfjp6OBXfw" name="MessageHandle" type="_eMWXUgbFEemvrfjp6OBXfw" association="_ePEUIAbFEemvrfjp6OBXfw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ePEUIgbFEemvrfjp6OBXfw" memberEnd="_eNp-4AbFEemvrfjp6OBXfw _ePEUIwbFEemvrfjp6OBXfw">
+      <ownedEnd xmi:id="_ePEUIwbFEemvrfjp6OBXfw" name="MessageHandle" type="_eMWXUgbFEemvrfjp6OBXfw" association="_ePEUIgbFEemvrfjp6OBXfw"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_eNZgMAbFEemvrfjp6OBXfw" name="util">
+    <packagedElement xmi:type="uml:Class" xmi:id="_eNZgMQbFEemvrfjp6OBXfw" name="XstreamUtil"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_eNZgMgbFEemvrfjp6OBXfw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_eNZgMwbFEemvrfjp6OBXfw" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_eNaHQAbFEemvrfjp6OBXfw" name="Collections"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_eNaHQQbFEemvrfjp6OBXfw" name="HashMap"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_eNaHQgbFEemvrfjp6OBXfw" name="HashSet"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_eNaHQwbFEemvrfjp6OBXfw" name="Map"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_eNaHRAbFEemvrfjp6OBXfw" name="Set"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_eNaHRQbFEemvrfjp6OBXfw" name="net">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_eNaHRgbFEemvrfjp6OBXfw" name="Socket"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_eNaHRwbFEemvrfjp6OBXfw" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_eNaHSAbFEemvrfjp6OBXfw" name="PrintStream"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_eNx6sAbFEemvrfjp6OBXfw" name="Map&lt;K,V>"/>
+</uml:Model>

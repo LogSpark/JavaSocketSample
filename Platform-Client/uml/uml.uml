@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="uml">
+  <packagedElement xmi:type="uml:Package" xmi:id="_PARS4Aa-Eemvrfjp6OBXfw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_PARS4Qa-Eemvrfjp6OBXfw" name="awt">
+      <packagedElement xmi:type="uml:Package" xmi:id="_PARS4wa-Eemvrfjp6OBXfw" name="event"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_PAR58Qa-Eemvrfjp6OBXfw" name="util"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_PAcSAQa-Eemvrfjp6OBXfw" name="io"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_PAc5EAa-Eemvrfjp6OBXfw" name="net"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_PAc5Ega-Eemvrfjp6OBXfw" name="sql"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_PAR58wa-Eemvrfjp6OBXfw" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_PAR59Aa-Eemvrfjp6OBXfw" name="swing"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_PAShBQa-Eemvrfjp6OBXfw" name="commons">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_PAbD4Aa-Eemvrfjp6OBXfw" name="ClientAction"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PAcSAAa-Eemvrfjp6OBXfw" name="ClientReceiveHandle"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VM6-MgbFEemvrfjp6OBXfw" name="ClientRequestHandle">
+      <ownedComment xmi:id="_VM7lQAbFEemvrfjp6OBXfw">
+        <body>/** 
+ * 客户端发送消息处理
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_VOIfIQbFEemvrfjp6OBXfw" general="_VOIfIAbFEemvrfjp6OBXfw"/>
+      <ownedOperation xmi:id="_VOIfIwbFEemvrfjp6OBXfw" name="toXML" visibility="public">
+        <ownedComment xmi:id="_VOJGMAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 转化成XML
+ * @return XML字符串
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_VOIfJAbFEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VOIfIAbFEemvrfjp6OBXfw" name="MessageHandle">
+      <ownedAttribute xmi:id="_VOJtQAbFEemvrfjp6OBXfw" name="sender" visibility="public" type="_VOJGMQbFEemvrfjp6OBXfw">
+        <ownedComment xmi:id="_VOJtQQbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 发送者
+ */
+</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_VOKUUAbFEemvrfjp6OBXfw" name="message" visibility="public">
+        <ownedComment xmi:id="_VOKUUQbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 消息
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_VOLicAbFEemvrfjp6OBXfw" name="receiver" visibility="public" type="_VOJGMQbFEemvrfjp6OBXfw">
+        <ownedComment xmi:id="_VOLicQbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 接收者
+ */
+</body>
+        </ownedComment>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_VOMJgAbFEemvrfjp6OBXfw" name="actionHandleClass" visibility="public">
+        <ownedComment xmi:id="_VOMwkAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * 接收到后消息处理类
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_VOMwkQbFEemvrfjp6OBXfw" name="getSender" visibility="public">
+        <ownedComment xmi:id="_VONXoAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_VOMwkgbFEemvrfjp6OBXfw" name="return" type="_VOJGMQbFEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_VONXoQbFEemvrfjp6OBXfw" name="setSender" visibility="public">
+        <ownedComment xmi:id="_VON-sAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param sender
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_VONXogbFEemvrfjp6OBXfw" name="sender" type="_VOJGMQbFEemvrfjp6OBXfw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_VON-sQbFEemvrfjp6OBXfw" name="getMessage" visibility="public">
+        <ownedComment xmi:id="_VOOlwAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_VON-sgbFEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_VOOlwQbFEemvrfjp6OBXfw" name="setMessage" visibility="public">
+        <ownedComment xmi:id="_VOOlwwbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param message
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_VOOlwgbFEemvrfjp6OBXfw" name="message">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_VOPM0AbFEemvrfjp6OBXfw" name="getReceiver" visibility="public">
+        <ownedComment xmi:id="_VOPz4AbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_VOPM0QbFEemvrfjp6OBXfw" name="return" type="_VOJGMQbFEemvrfjp6OBXfw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_VOPz4QbFEemvrfjp6OBXfw" name="setReceiver" visibility="public">
+        <ownedComment xmi:id="_VOPz4wbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param receiver
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_VOPz4gbFEemvrfjp6OBXfw" name="receiver" type="_VOJGMQbFEemvrfjp6OBXfw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_VOQa8AbFEemvrfjp6OBXfw" name="getActionHandleClass" visibility="public">
+        <ownedComment xmi:id="_VOQa8gbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_VOQa8QbFEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_VOQa8wbFEemvrfjp6OBXfw" name="setActionHandleClass" visibility="public">
+        <ownedComment xmi:id="_VORCAAbFEemvrfjp6OBXfw">
+          <body>/** 
+ * @param actionHandleClass
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_VOQa9AbFEemvrfjp6OBXfw" name="actionHandleClass">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_PATIEAa-Eemvrfjp6OBXfw" name="util">
+    <packagedElement xmi:type="uml:Class" xmi:id="_VN7DwQbFEemvrfjp6OBXfw" name="XstreamUtil"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_PAk04ga-Eemvrfjp6OBXfw" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_PAk04wa-Eemvrfjp6OBXfw" name="thoughtworks">
+      <packagedElement xmi:type="uml:Package" xmi:id="_PAk05Aa-Eemvrfjp6OBXfw" name="xstream">
+        <packagedElement xmi:type="uml:Package" xmi:id="_PAk05ga-Eemvrfjp6OBXfw" name="io">
+          <packagedElement xmi:type="uml:Package" xmi:id="_PAk05wa-Eemvrfjp6OBXfw" name="xml"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_S4ASEAbBEemvrfjp6OBXfw" name="client">
+    <packagedElement xmi:type="uml:Class" xmi:id="_S4ASEQbBEemvrfjp6OBXfw" name="ChatPanel">
+      <ownedComment xmi:id="_S4CHQAbBEemvrfjp6OBXfw">
+        <body>/** 
+ * 构建聊天室
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_S5KvsQbBEemvrfjp6OBXfw" general="_S5KvsAbBEemvrfjp6OBXfw"/>
+      <ownedAttribute xmi:id="_S5kYUAbBEemvrfjp6OBXfw" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+        <ownedComment xmi:id="_S5k_YAbBEemvrfjp6OBXfw">
+          <body>/** 
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_S5kYUQbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S5lmcAbBEemvrfjp6OBXfw" name="user" visibility="private">
+        <ownedComment xmi:id="_S5mNgAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 用户
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HsZQbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S5nboAbBEemvrfjp6OBXfw" name="receiver" visibility="private">
+        <ownedComment xmi:id="_S5oCsAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 接收消息者,默认为所有人
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HsZQbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S5opwAbBEemvrfjp6OBXfw" name="all" visibility="private" isStatic="true">
+        <ownedComment xmi:id="_S5pQ0AbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 所有用户
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HFVwbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S5p34AbBEemvrfjp6OBXfw" name="textArea" visibility="private" isStatic="true">
+        <ownedComment xmi:id="_S5qe8AbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 聊天内容显示区域
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HsYQbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S5rGAAbBEemvrfjp6OBXfw" name="userList" visibility="private" isStatic="true">
+        <ownedComment xmi:id="_S5rtEAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 用户列表
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HFXQbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S5sUIAbBEemvrfjp6OBXfw" name="field" visibility="private">
+        <ownedComment xmi:id="_S5s7MAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 输入框
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HsYgbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S5tiQAbBEemvrfjp6OBXfw" name="sendButton" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HFWwbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_S5uJUAbBEemvrfjp6OBXfw" name="sendLisenter" visibility="private">
+        <ownedComment xmi:id="_S5vXcAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 发送按钮监听
+ */
+</body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:id="_S5v-gQbBEemvrfjp6OBXfw" name="appendContent" visibility="public" isStatic="true">
+        <ownedComment xmi:id="_S5wlkAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 显示在消息显示区域
+ * @param content 发送的消息
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_S5v-ggbBEemvrfjp6OBXfw" name="content">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_S5xMoAbBEemvrfjp6OBXfw" name="setUserList" visibility="public" isStatic="true">
+        <ownedComment xmi:id="_S5xzsAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 显示用户列表
+ */
+</body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:id="_S5xzsQbBEemvrfjp6OBXfw" name="send" visibility="public">
+        <ownedComment xmi:id="_S5yawAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 发送消息
+ */
+</body>
+        </ownedComment>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_S4CuUAbBEemvrfjp6OBXfw" name="ChatReceiverAction" clientDependency="_S5yawQbBEemvrfjp6OBXfw">
+      <ownedComment xmi:id="_S4CuUQbBEemvrfjp6OBXfw">
+        <body>/** 
+ * 客户端接收消息后的动作处理的实现类
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <interfaceRealization xmi:id="_S5yawQbBEemvrfjp6OBXfw" name="ClientAction" client="_S4CuUAbBEemvrfjp6OBXfw">
+        <supplier xmi:type="uml:Interface" href="../uml.uml#_S5ITcAbBEemvrfjp6OBXfw"/>
+        <contract href="../uml.uml#_S5ITcAbBEemvrfjp6OBXfw"/>
+      </interfaceRealization>
+      <ownedOperation xmi:id="_S5yawgbBEemvrfjp6OBXfw" name="execute" visibility="public">
+        <ownedParameter xmi:id="_S5yawwbBEemvrfjp6OBXfw" name="crh">
+          <type xmi:type="uml:Class" href="../uml.uml#_S5ITcQbBEemvrfjp6OBXfw"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_S4DVYAbBEemvrfjp6OBXfw" name="LoginFrame">
+      <ownedComment xmi:id="_S4FKkAbBEemvrfjp6OBXfw">
+        <body>/** 
+ * 连接窗口，一切根源的开始
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_S5zB0AbBEemvrfjp6OBXfw" general="_S5KvsAbBEemvrfjp6OBXfw"/>
+      <ownedAttribute xmi:id="_S50P8AbBEemvrfjp6OBXfw" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+        <ownedComment xmi:id="_S51eEAbBEemvrfjp6OBXfw">
+          <body>/** 
+ */
+</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_S50P8QbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S52sMAbBEemvrfjp6OBXfw" name="user" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HsZQbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S55IcAbBEemvrfjp6OBXfw" name="allUsers" visibility="public" isStatic="true"/>
+      <ownedAttribute xmi:id="_S57ksAbBEemvrfjp6OBXfw" name="nameTextLabel" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5ITgQbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S5-A8AbBEemvrfjp6OBXfw" name="nameField" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HsYgbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S5_2IAbBEemvrfjp6OBXfw" name="connectionLabel" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5ITgQbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S6CSYAbBEemvrfjp6OBXfw" name="connectionField" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HsYgbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S6FVsAbBEemvrfjp6OBXfw" name="gameTextLabel" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5ITgQbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S6HK4AbBEemvrfjp6OBXfw" name="gameSelect" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5ITfwbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S6JnIAbBEemvrfjp6OBXfw" name="addGame" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HFWwbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S6MDYAbBEemvrfjp6OBXfw" name="confirmButton" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HFWwbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_S6OfoAbBEemvrfjp6OBXfw" name="cancelButton" visibility="private">
+        <type xmi:type="uml:DataType" href="../uml.uml#_S5HFWwbBEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_S6QU0AbBEemvrfjp6OBXfw" name="initListeners" visibility="private">
+        <ownedComment xmi:id="_S6Q74AbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 按钮事件监听
+ */
+</body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:id="_S6Ri8AbBEemvrfjp6OBXfw" name="openDir" visibility="private">
+        <ownedComment xmi:id="_S6SKAAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 打开文件选择器
+ * @throws IOException
+ * @throws InstantiationException
+ * @throws IllegalAccessException
+ * @throws ClassNotFoundException
+ * @throws SQLException SQL连接异常
+ */
+</body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:id="_S6SxEAbBEemvrfjp6OBXfw" name="login" visibility="private">
+        <ownedComment xmi:id="_S6TYIAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 发起连接
+ * @throws IOException
+ */
+</body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:id="_S6T_MQbBEemvrfjp6OBXfw" name="createSocket" visibility="private">
+        <ownedComment xmi:id="_S6VNUAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 创建Socket
+ * @param address 连接IP
+ * @param port 端口号，默认8888
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_S6T_MgbBEemvrfjp6OBXfw" name="address">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_S6T_MwbBEemvrfjp6OBXfw" name="port">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_S6T_NAbBEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:DataType" href="../uml.uml#_S5ITeAbBEemvrfjp6OBXfw"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_S6VNUQbBEemvrfjp6OBXfw" name="setUser" visibility="public">
+        <ownedComment xmi:id="_S6XCgAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 初始化User
+ */
+</body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:id="_S6XCgQbBEemvrfjp6OBXfw" name="buildGameSelect" visibility="private">
+        <ownedComment xmi:id="_S6YQoAbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 创建游戏下拉框
+ * @throws InstantiationException
+ * @throws IllegalAccessException
+ * @throws ClassNotFoundException
+ */
+</body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:id="_S6YQoQbBEemvrfjp6OBXfw" name="connectSQL" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_S4FKkQbBEemvrfjp6OBXfw" name="Main">
+      <ownedOperation xmi:id="_S6ZewAbBEemvrfjp6OBXfw" name="main" visibility="public" isStatic="true">
+        <ownedComment xmi:id="_S6aF0AbBEemvrfjp6OBXfw">
+          <body>/** 
+ * 主程序入口
+ * @param args
+ * @throws ClassNotFoundException 
+ * @throws IllegalAccessException 
+ * @throws InstantiationException 
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_S6ZewQbBEemvrfjp6OBXfw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S6ZewgbBEemvrfjp6OBXfw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S6ZewwbBEemvrfjp6OBXfw"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_S4FxoAbBEemvrfjp6OBXfw" name="ChatStart" clientDependency="_S6aF0gbBEemvrfjp6OBXfw">
+      <ownedComment xmi:id="_S4FxoQbBEemvrfjp6OBXfw">
+        <body>/** 
+ * 聊天室开始接口的实现类
+ * @author lndx
+ */
+</body>
+      </ownedComment>
+      <interfaceRealization xmi:id="_S6aF0gbBEemvrfjp6OBXfw" name="Game" supplier="_S6aF0QbBEemvrfjp6OBXfw" client="_S4FxoAbBEemvrfjp6OBXfw" contract="_S6aF0QbBEemvrfjp6OBXfw"/>
+      <ownedOperation xmi:id="_S6aF0wbBEemvrfjp6OBXfw" name="start" visibility="public">
+        <ownedParameter xmi:id="_S6aF1AbBEemvrfjp6OBXfw" name="user">
+          <type xmi:type="uml:DataType" href="../uml.uml#_S5HsZQbBEemvrfjp6OBXfw"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_S6as4AbBEemvrfjp6OBXfw" name="toString" visibility="public">
+        <ownedParameter xmi:id="_S6as4QbBEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_S5KvsAbBEemvrfjp6OBXfw" name="JFrame"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_S6aF0QbBEemvrfjp6OBXfw" name="Game"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_S6as4gbBEemvrfjp6OBXfw" name="Thread"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_H4HAkQbCEemvrfjp6OBXfw" name="ClientThread">
+      <ownedComment xmi:id="_H4HnoAbCEemvrfjp6OBXfw">
+        <body>/** 
+ * 客户端线程，接受服务器消息
+ * @author win10
+ */
+</body>
+      </ownedComment>
+      <generalization xmi:id="_H5UhgQbCEemvrfjp6OBXfw">
+        <general xmi:type="uml:Class" href="../uml.uml#_H5UhgAbCEemvrfjp6OBXfw"/>
+      </generalization>
+      <ownedAttribute xmi:id="_H5VIkAbCEemvrfjp6OBXfw" name="user" visibility="package">
+        <type xmi:type="uml:DataType" href="../uml.uml#_H5IUUAbCEemvrfjp6OBXfw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_H5WWsAbCEemvrfjp6OBXfw" name="line" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_H5W9wAbCEemvrfjp6OBXfw" name="run" visibility="public"/>
+      <ownedOperation xmi:id="_H5W9wQbCEemvrfjp6OBXfw" name="getContent" visibility="public">
+        <ownedComment xmi:id="_H5Xk0QbCEemvrfjp6OBXfw">
+          <body>/** 
+ * 将接收到的消息(XML)转化为消息处理对象
+ * @param line 接收到的消息
+ * @return
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_H5W9wgbCEemvrfjp6OBXfw" name="line">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_H5Xk0AbCEemvrfjp6OBXfw" name="return" direction="return">
+          <type xmi:type="uml:DataType" href="../uml.uml#_H5IUTgbCEemvrfjp6OBXfw"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_W592MAbCEemvrfjp6OBXfw" name=""/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_E7-xMAbDEemvrfjp6OBXfw" name="Class1"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PXdRkAbDEemvrfjp6OBXfw" name="ClientThread">
+      <ownedAttribute xmi:id="_WJnh4AbDEemvrfjp6OBXfw" name="user"/>
+      <ownedAttribute xmi:id="_a86RwAbDEemvrfjp6OBXfw" name="line"/>
+      <ownedOperation xmi:id="_ft-0EAbDEemvrfjp6OBXfw" name="run"/>
+      <ownedOperation xmi:id="_n7u4oAbDEemvrfjp6OBXfw" name="getContent"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_EQQowAbFEemvrfjp6OBXfw" name="ClientThread">
+      <ownedAttribute xmi:id="_EQQowQbFEemvrfjp6OBXfw" name="user"/>
+      <ownedAttribute xmi:id="_EQQowgbFEemvrfjp6OBXfw" name="line"/>
+      <ownedOperation xmi:id="_EQQowwbFEemvrfjp6OBXfw" name="run"/>
+      <ownedOperation xmi:id="_EQQoxAbFEemvrfjp6OBXfw" name="getContent"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IzwCEAbFEemvrfjp6OBXfw" name="ClientThread">
+      <ownedAttribute xmi:id="_IzwCEQbFEemvrfjp6OBXfw" name="user"/>
+      <ownedAttribute xmi:id="_IzwCEgbFEemvrfjp6OBXfw" name="line"/>
+      <ownedOperation xmi:id="_IzwCEwbFEemvrfjp6OBXfw" name="run"/>
+      <ownedOperation xmi:id="_IzwCFAbFEemvrfjp6OBXfw" name="getContent"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_OG-PMAbFEemvrfjp6OBXfw" name="A_&lt;main>_&lt;loginFrame>" memberEnd="_OG-PMQbFEemvrfjp6OBXfw _OG-PNAbFEemvrfjp6OBXfw">
+      <ownedEnd xmi:id="_OG-PMQbFEemvrfjp6OBXfw" name="main" type="_S4FKkQbBEemvrfjp6OBXfw" association="_OG-PMAbFEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OG-PMgbFEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OG-PMwbFEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_OG-PNAbFEemvrfjp6OBXfw" name="loginFrame" type="_S4DVYAbBEemvrfjp6OBXfw" association="_OG-PMAbFEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OG-PNQbFEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OG-PNgbFEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PayngAbFEemvrfjp6OBXfw" name="A_&lt;loginFrame>_&lt;clientThread>" memberEnd="_PayngQbFEemvrfjp6OBXfw _PaynhAbFEemvrfjp6OBXfw">
+      <ownedEnd xmi:id="_PayngQbFEemvrfjp6OBXfw" name="loginFrame" type="_S4DVYAbBEemvrfjp6OBXfw" association="_PayngAbFEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PaynggbFEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PayngwbFEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_PaynhAbFEemvrfjp6OBXfw" name="clientThread" type="_IzwCEAbFEemvrfjp6OBXfw" association="_PayngAbFEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PaynhQbFEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PaynhgbFEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_QPs2QAbFEemvrfjp6OBXfw" name="A_&lt;loginFrame>_&lt;clientThread>" memberEnd="_QPs2QQbFEemvrfjp6OBXfw _QPs2RAbFEemvrfjp6OBXfw">
+      <ownedEnd xmi:id="_QPs2QQbFEemvrfjp6OBXfw" name="loginFrame" type="_S4DVYAbBEemvrfjp6OBXfw" association="_QPs2QAbFEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QPs2QgbFEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QPs2QwbFEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_QPs2RAbFEemvrfjp6OBXfw" name="clientThread" type="_PXdRkAbDEemvrfjp6OBXfw" association="_QPs2QAbFEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QPs2RQbFEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QPs2RgbFEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RmEMQAbFEemvrfjp6OBXfw" name="A_&lt;loginFrame>_&lt;clientThread>" memberEnd="_RmEMQQbFEemvrfjp6OBXfw _RmEMRAbFEemvrfjp6OBXfw">
+      <ownedEnd xmi:id="_RmEMQQbFEemvrfjp6OBXfw" name="loginFrame" type="_S4DVYAbBEemvrfjp6OBXfw" association="_RmEMQAbFEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RmEMQgbFEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RmEMQwbFEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_RmEMRAbFEemvrfjp6OBXfw" name="clientThread" type="_H4HAkQbCEemvrfjp6OBXfw" association="_RmEMQAbFEemvrfjp6OBXfw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RmEMRQbFEemvrfjp6OBXfw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RmEMRgbFEemvrfjp6OBXfw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_S5I6gQbBEemvrfjp6OBXfw" name="exception"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_VOJGMQbFEemvrfjp6OBXfw" name="User"/>
+</uml:Model>
